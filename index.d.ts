@@ -68,5 +68,5 @@ interface VoxelDestruction{
 }
 
 declare module "@rbxts/voxel-destruction"{
-    export const VoxelDestruciton: VoxelDestruction;
+    export const VoxelDestruction: VoxelDestruction
 }
