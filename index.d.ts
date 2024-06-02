@@ -2,7 +2,7 @@
  * Hitbox object that VoxDestruciton uses in Moveable Hitbox
  */
 interface HitboxObject {
-    //Functions
+    //Methods
     /**
      * Starts Hitbox
      */
@@ -19,7 +19,7 @@ interface HitboxObject {
      * Weld hitbox to a part
      * @param Part Part to weld hitbox to
      */
-    WeldTo(Part: Part): void;
+    WeldTo(Part: Part, Offset: CFrame): void;
     /**
      * Unwelds hitbox
      */
@@ -28,6 +28,8 @@ interface HitboxObject {
      * Destroys the Hitbox
      */
     Destroy(): void;
+    //Functions
+    Touched: RBXScriptSignal;
 }
 
 /**

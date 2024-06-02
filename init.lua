@@ -1108,11 +1108,11 @@ function VoxBreaker:Destroy() -- Use to destroy moveable hitbox
 	self.Part:Destroy()
 end
 
-function VoxBreaker:WeldTo(Part : Part) --welds the hitbox to a specified part
+function VoxBreaker:WeldTo(Part : Part, Offset: CFrame) --welds the hitbox to a specified part
 	task.spawn(function()
 		local connection = rs.RenderStepped:Connect(function()
 			if Part then
-				self.Part.CFrame = Part.CFrame
+				self.Part.CFrame = Part.CFrame * Offset
 			end
 
 		end)
